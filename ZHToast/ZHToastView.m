@@ -200,6 +200,7 @@ static const float kDefaultRadius = 6.0;
     
     [self updateUIWithStyle];
     [self registerKVO];
+    [self registerNotification];
 }
 
 #pragma mark - Private
@@ -237,7 +238,14 @@ static const float kDefaultRadius = 6.0;
  *  Get the position in superview. Default is the center point.
  */
 - (CGPoint)positionInParentView {
-    return CGPointMake(self.parentView.view_width/2, self.parentView.view_height/2 + self.offsetY);
+    return CGPointMake(self.superview.view_width/2, self.superview.view_height/2 + self.offsetY);
+}
+
+/**
+ * Get reverse position when the orientation changed.
+ */
+- (CGPoint)reversePosition {
+    return CGPointMake(self.superview.view_height/2, self.superview.view_width/2 + self.offsetY);
 }
 
 #pragma mark - Init UI
@@ -330,6 +338,7 @@ static const float kDefaultRadius = 6.0;
 
 - (void)dealloc {
     [self unregisterKVO];
+    [self unregisterNotification];
 }
 
 - (void)layoutSubviews {
@@ -373,6 +382,24 @@ static const float kDefaultRadius = 6.0;
     }
 }
 
+/**
+ * Calculate the toast view size according to the parentView size.
+ */
+- (void)calculateViewSize {
+    if (self.view_width > self.parentView.view_width) {
+        self.view_width = (self.parentView.view_width - kPadding*2 > 0) ? self.parentView.view_width - kPadding*2 : self.parentView.view_width;
+        if (self.toastStyle == ZHToastStyleHint) {
+            self.view_height = [self textSize].height + kPadding*2;
+        }
+        else if (self.toastStyle == ZHToastStyleImage) {
+            self.view_height = [self textSize].height + kPadding*2 + _imageSize.height + 5;
+        }
+        else if (self.toastStyle == ZHToastStyleHUD) {
+            self.view_height = [self textSize].height + kPadding*2 + self.indicatorView.view_height + kPadding;
+        }
+    }
+}
+
 #pragma mark - Show & Hide 
 
 - (void)show {
@@ -389,18 +416,8 @@ static const float kDefaultRadius = 6.0;
     }
     
     // Handle the situation that the toast width is bigger than that of its superview.
-    if (self.view_width > self.parentView.view_width) {
-        self.view_width = (self.parentView.view_width - kPadding*2 > 0) ? self.parentView.view_width - kPadding*2 : self.parentView.view_width;
-        if (self.toastStyle == ZHToastStyleHint) {
-            self.view_height = [self textSize].height + kPadding*2;
-        }
-        else if (self.toastStyle == ZHToastStyleImage) {
-            self.view_height = [self textSize].height + kPadding*2 + _imageSize.height + 5;
-        }
-        else if (self.toastStyle == ZHToastStyleHUD) {
-            self.view_height = [self textSize].height + kPadding*2 + self.indicatorView.view_height + kPadding;
-        }
-    }
+    [self calculateViewSize];
+    
     // Set corner radius of toast view.
     self.layer.cornerRadius = self.toastRadius;
     self.layer.masksToBounds = YES;
@@ -701,5 +718,39 @@ static const float kDefaultRadius = 6.0;
     }
 }
 
+#pragma mark - NSNotification
+
+- (void)registerNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(statusBarOrientationDidChange:)
+                                                 name:UIApplicationDidChangeStatusBarOrientationNotification
+                                               object:nil];
+}
+
+- (void)unregisterNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIApplicationDidChangeStatusBarOrientationNotification
+                                                  object:nil];
+}
+
+- (void)statusBarOrientationDidChange:(NSNotification *)notification {
+    UIView *superview = self.superview;
+    if (!superview) {
+        return;
+    }
+    if ([self.superview isKindOfClass:NSClassFromString(@"UIRemoteKeyboardWindow")]) {
+        self.center = [self reversePosition];
+        return;
+    }
+    
+    if (self.toastStyle == ZHToastStyleNavBar) {
+        self.view_top = 0;
+        self.view_left = 0;
+        self.view_width = self.parentView.view_width;
+    } else {
+        [self calculateViewSize];
+        self.center = [self positionInParentView];
+    }
+}
 
 @end
