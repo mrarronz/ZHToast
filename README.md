@@ -100,7 +100,7 @@ toast.automaticallyHide = YES;
 
 ![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/loading.png)
 
-Loading style is different from HUD, the indicator is displayed on left of the text label. I prefer to use it in webview.
+Loading style is different from HUD, the indicator is displayed on left of the text label. I prefer to use it with loading a webview.
 
 ```objective-c
 ZHToastView *toast = [[ZHToastView alloc] initWithStyle:ZHToastStyleLoading];
@@ -110,13 +110,13 @@ toast.automaticallyHide = YES;
 [toast show];
 ```
 
-ZHToast provides multiple properties to customize the UI. Suggest to use any toast or HUD with an objective-c Category, for example, you can create a UIView category named 'UIView+HUD'(whatever), encapsulate all the usage method in the category.
+ZHToast provides multiple properties to customize the UI. Suggest to use any toast or HUD with an objective-c category, for example, you can create a UIView category named 'UIView+Toast'(whatever), encapsulate all the usage methods in the category.
 
 ```objective-c
 - (void)toast:(NSString *)text;
 ```
 
-in the view you want to display it, just use:
+in the view you want to display it, just do it like below:
 
 ```objective-c
 [self.view toast:@"Yes, this is awesome!"];
