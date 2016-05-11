@@ -15,7 +15,7 @@ Drag the folder ZHToast to your own project and import ZHToastView.h in the clas
 ## Usage
 The example project provides multiple ways to use the ZHToast. Following is the screenshot and usage code:
 
-1. Hint
+1、Hint
 
 Hint is the most normal style, we often use it to show a text message only with a label. you can use it like this:
 
@@ -34,7 +34,7 @@ or simply use the Class method:
 [ZHToastView showToast:@"Hello world!"];
 ```
 
-2. Image
+2、Image
 
 Image style is showing a text with an icon, sometimes we may need to show a success message to user after completing a task successfully. Below is the sample code:
 
@@ -53,7 +53,7 @@ or you can simply use it like this:
 [ZHToastView showToast:@"Data downloaded" image:[UIImage imageNamed:@"success"]];
 ```
 
-3. HUD
+3、HUD
 
 The HUD style shows a loading message with an indicator, call this method when you have tasks executed in the background thread.
 
@@ -65,7 +65,7 @@ toast.automaticallyHide = YES;
 [toast show];
 ```
 
-4. Show in NavigationBar
+4、Show in NavigationBar
 
 This UI style simulated the pop message in the app [Zaker](http://itunes.apple.com/us/app/zaker/id410174232?mt=8)
 
@@ -77,7 +77,7 @@ toast.automaticallyHide = YES;
 [toast show];
 ```
 
-5. Loading
+5、Loading
 
 Loading style is different from HUD, the indicator is displayed on left of the text label. I prefer to use it in webview.
 
