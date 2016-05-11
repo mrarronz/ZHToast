@@ -1,4 +1,9 @@
 # ZHToast
+
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/ZHToast.svg?style=flat)](https://cocoapods.org/pods/ZHToast)
+[![Platform](https://img.shields.io/cocoapods/p/ZHToast.svg?style=flat)](http://cocoadocs.org/docsets/ZHToast)
+[![License: MIT](https://img.shields.io/cocoapods/l/ZHToast.svg?style=flat)](http://opensource.org/licenses/MIT)
+
 ZHToast is a simple iOS toast view, it can be used to show text message or HUD on device screen. ZHToastView provides multiple kinds of features and easy to use.
 
 ## Requirement
