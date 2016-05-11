@@ -3,11 +3,21 @@ ZHToast is a simple iOS toast view, it can be used to show text message or HUD o
 
 ## Requirement
 ZHToast works on iOS 6+ and requires ARC to build. It depends on below Apple frameworks:
-  UIKit.framework
-  Foundation.framework
+  * UIKit.framework
+  * Foundation.framework
 
 ## CocoaPods
-pod 'ZHToast', '~> 0.0.1'
+`platform :ios, '6.0'`
+
+`pod 'ZHToast', '~> 0.0.1'`
+
+
+if this doesn't work, then directly add pod entry like this:
+
+`platform :ios, '6.0'`
+
+`pod 'ZHToast', :git => 'https://github.com/mrarronz/ZHToast.git', :tag => '0.0.1'`
+
 
 ## Manually
 Drag the folder ZHToast to your own project and import ZHToastView.h in the class file.
