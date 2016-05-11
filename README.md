@@ -27,6 +27,8 @@ The example project provides multiple ways to use the ZHToast. Following is the 
 
 1、Hint
 
+![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/hint.png)
+
 Hint is the most normal style, we often use it to show a text message only with a label. you can use it like this:
 
 ```objective-c
@@ -45,6 +47,8 @@ or simply use the Class method:
 ```
 
 2、Image
+
+![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/text_image.png)
 
 Image style is showing a text with an icon, sometimes we may need to show a success message to user after completing a task successfully. Below is the sample code:
 
@@ -65,6 +69,9 @@ or you can simply use it like this:
 
 3、HUD
 
+![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/hud_text.png)
+![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/hud_no_text.png)
+
 The HUD style shows a loading message with an indicator, call this method when you have tasks executed in the background thread.
 
 ```objective-c
@@ -77,6 +84,8 @@ toast.automaticallyHide = YES;
 
 4、Show in NavigationBar
 
+![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/navigationbar.png)
+
 This UI style simulated the pop message in the app [Zaker](http://itunes.apple.com/us/app/zaker/id410174232?mt=8)
 
 ```objective-c
@@ -88,6 +97,8 @@ toast.automaticallyHide = YES;
 ```
 
 5、Loading
+
+![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/loading.png)
 
 Loading style is different from HUD, the indicator is displayed on left of the text label. I prefer to use it in webview.
 
