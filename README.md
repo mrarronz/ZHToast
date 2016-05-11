@@ -19,7 +19,16 @@ The example project provides multiple ways to use the ZHToast. Following is the 
 
 Hint is the most normal style, we often use it to show a text message only with a label. you can use it like this:
 
+ZHToastView *toast = [[ZHToastView alloc] initWithStyle:ZHToastStyleHint];
+toast.parentView = self.view;
+toast.toastAnim = ZHToastAnimationFade;
+toast.labelText = @"Hello Animation~~";
+toast.automaticallyHide = YES;
+[toast show];
 
+or simply use the Class method:
+
+[ZHToastView showToast:@"Hello world!"];
 
 
 2. Image
