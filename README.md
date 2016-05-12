@@ -11,7 +11,10 @@ ZHToast works on iOS 6+ and requires ARC to build. It depends on below Apple fra
   * UIKit.framework
   * Foundation.framework
 
-## CocoaPods
+## Installation
+
+### CocoaPods
+
 `platform :ios, '6.0'`
 
 `pod 'ZHToast', '~> 0.0.1'`
@@ -24,7 +27,7 @@ if this doesn't work, then directly add pod entry like this:
 `pod 'ZHToast', :git => 'https://github.com/mrarronz/ZHToast.git', :tag => '0.0.1'`
 
 
-## Manually
+### Manually
 Drag the folder ZHToast to your own project and import ZHToastView.h in the class file.
 
 ## Usage
