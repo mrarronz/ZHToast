@@ -94,7 +94,7 @@ toast.automaticallyHide = YES;
 
 ![image](https://github.com/mrarronz/ZHToast/raw/master/screenshot/navigationbar.png)
 
-This UI style simulated the pop message in the app [Zaker](http://itunes.apple.com/us/app/zaker/id410174232?mt=8)
+This UI style simulated the pop message in the app [ZAKER](http://itunes.apple.com/us/app/zaker/id410174232?mt=8)
 
 ```objective-c
 ZHToastView *toast = [[ZHToastView alloc] initWithStyle:ZHToastStyleNavBar];
