@@ -1,2 +1,0 @@
-platform :ios, '6.0'
-pod 'ZHToast', :git => 'https://github.com/mrarronz/ZHToast.git', :tag => '0.0.1'

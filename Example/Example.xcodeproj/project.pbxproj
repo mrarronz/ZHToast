@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05185B2B7F79871E580AA7EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F88B4927FA5EA10C8A874F /* libPods.a */; };
 		E21697C21CE1DDD800A40618 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E21697C11CE1DDD800A40618 /* main.m */; };
 		E21697C51CE1DDD800A40618 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E21697C41CE1DDD800A40618 /* AppDelegate.m */; };
 		E21697C81CE1DDD800A40618 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21697C71CE1DDD800A40618 /* ViewController.m */; };
@@ -18,6 +17,8 @@
 		E21697E61CE1DDD800A40618 /* ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E21697E51CE1DDD800A40618 /* ExampleUITests.m */; };
 		E21697FC1CE1EF1B00A40618 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = E21697FB1CE1EF1B00A40618 /* UIView+Toast.m */; };
 		E21697FF1CE1FAB300A40618 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21697FE1CE1FAB300A40618 /* SecondViewController.m */; };
+		E21F2C921CF2D14700E53AC0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E21F2C8F1CF2D14700E53AC0 /* UIView+Frame.m */; };
+		E21F2C931CF2D14700E53AC0 /* ZHToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = E21F2C911CF2D14700E53AC0 /* ZHToastView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		85E3F0B5535407D418BF491B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A34112DFCF77758F23EF87B9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		A6F88B4927FA5EA10C8A874F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21697BD1CE1DDD800A40618 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21697C11CE1DDD800A40618 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E21697C31CE1DDD800A40618 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +59,10 @@
 		E21697FB1CE1EF1B00A40618 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		E21697FD1CE1FAB300A40618 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E21697FE1CE1FAB300A40618 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E21F2C8E1CF2D14700E53AC0 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E21F2C8F1CF2D14700E53AC0 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		E21F2C901CF2D14700E53AC0 /* ZHToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHToastView.h; sourceTree = "<group>"; };
+		E21F2C911CF2D14700E53AC0 /* ZHToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHToastView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05185B2B7F79871E580AA7EE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +93,6 @@
 		9ADF9F267DCC93F30ADB132A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6F88B4927FA5EA10C8A874F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,7 +104,6 @@
 				E21697D91CE1DDD800A40618 /* ExampleTests */,
 				E21697E41CE1DDD800A40618 /* ExampleUITests */,
 				E21697BE1CE1DDD800A40618 /* Products */,
-				F485D48B4AAAE97B58D9B730 /* Pods */,
 				9ADF9F267DCC93F30ADB132A /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -122,6 +121,7 @@
 		E21697BF1CE1DDD800A40618 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				E21F2C8D1CF2D14700E53AC0 /* ZHToast */,
 				E21697C31CE1DDD800A40618 /* AppDelegate.h */,
 				E21697C41CE1DDD800A40618 /* AppDelegate.m */,
 				E21697FA1CE1EF1B00A40618 /* UIView+Toast.h */,
@@ -165,13 +165,16 @@
 			path = ExampleUITests;
 			sourceTree = "<group>";
 		};
-		F485D48B4AAAE97B58D9B730 /* Pods */ = {
+		E21F2C8D1CF2D14700E53AC0 /* ZHToast */ = {
 			isa = PBXGroup;
 			children = (
-				85E3F0B5535407D418BF491B /* Pods.debug.xcconfig */,
-				A34112DFCF77758F23EF87B9 /* Pods.release.xcconfig */,
+				E21F2C8E1CF2D14700E53AC0 /* UIView+Frame.h */,
+				E21F2C8F1CF2D14700E53AC0 /* UIView+Frame.m */,
+				E21F2C901CF2D14700E53AC0 /* ZHToastView.h */,
+				E21F2C911CF2D14700E53AC0 /* ZHToastView.m */,
 			);
-			name = Pods;
+			name = ZHToast;
+			path = ../../ZHToast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +184,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E21697EA1CE1DDD800A40618 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				3FC89417CEAE46DF3F806E50 /* Check Pods Manifest.lock */,
 				E21697B91CE1DDD800A40618 /* Sources */,
 				E21697BA1CE1DDD800A40618 /* Frameworks */,
 				E21697BB1CE1DDD800A40618 /* Resources */,
-				8B15DF2565A4B7EF084D59F5 /* Embed Pods Frameworks */,
-				C9BB23777D7C711DC185DC0A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,59 +302,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3FC89417CEAE46DF3F806E50 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8B15DF2565A4B7EF084D59F5 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9BB23777D7C711DC185DC0A /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E21697B91CE1DDD800A40618 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21F2C921CF2D14700E53AC0 /* UIView+Frame.m in Sources */,
+				E21F2C931CF2D14700E53AC0 /* ZHToastView.m in Sources */,
 				E21697FC1CE1EF1B00A40618 /* UIView+Toast.m in Sources */,
 				E21697FF1CE1FAB300A40618 /* SecondViewController.m in Sources */,
 				E21697C81CE1DDD800A40618 /* ViewController.m in Sources */,
@@ -496,7 +450,6 @@
 		};
 		E21697EB1CE1DDD800A40618 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85E3F0B5535407D418BF491B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -508,7 +461,6 @@
 		};
 		E21697EC1CE1DDD800A40618 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A34112DFCF77758F23EF87B9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
