@@ -540,9 +540,11 @@ static const float kDefaultRadius = 6.0;
         [self.parentView addSubview:self];
         self.center = [self positionInParentView];
         self.transform = CGAffineTransformConcat(CGAffineTransformIdentity, CGAffineTransformMakeScale(1.5f, 1.5f));
+        self.alpha = 0;
         [UIView animateWithDuration:kAnimationDuration
                          animations:^{
                              self.transform = CGAffineTransformIdentity;
+                             self.alpha = 1.0;
         } completion:^(BOOL finished) {
             if (self.automaticallyHide) {
                 [self hide];
@@ -619,6 +621,7 @@ static const float kDefaultRadius = 6.0;
             [UIView animateWithDuration:kAnimationDuration
                              animations:^{
                                  self.transform = CGAffineTransformConcat(CGAffineTransformIdentity, CGAffineTransformMakeScale(0.2f, 0.2f));
+                                 self.alpha = 0;
                              } completion:^(BOOL finished) {
                                  [self done];
                              }];
