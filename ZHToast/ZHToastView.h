@@ -83,88 +83,88 @@ typedef void(^ZHToastCompletionBlock)();
  *
  * @see ZHToastStyle
  */
-@property (assign) ZHToastStyle toastStyle;
+@property (nonatomic, assign) ZHToastStyle toastStyle;
 
 /**
  * The Animation style of ZHToastView, different UI style will show and hide with different animation. Default is 'ZHToastAnimationNone'.
  *
  * @see ZHToastAnimation.
  */
-@property (assign) ZHToastAnimation toastAnim;
+@property (nonatomic, assign) ZHToastAnimation toastAnim;
 
 /**
  * The delegate object of ZHToastViewDelegate.
  *
  * @see ZHToastViewDelegate
  */
-@property (assign) id<ZHToastViewDelegate> delegate;
+@property (nonatomic, assign) id<ZHToastViewDelegate> delegate;
 
 /**
  * A block which is called after the toast is fully hidden.
  */
-@property (copy) ZHToastCompletionBlock completionBlock;
+@property (nonatomic, copy) ZHToastCompletionBlock completionBlock;
 
 /**
  * The superview of toast view, must be set a UIView object before you show toast. Default is nil.
  */
-@property (assign) UIView *parentView;
+@property (nonatomic, assign) UIView *parentView;
 
 /**
  * The background color of toast view. Default is black color with 0.7 alpha value.
  */
-@property (strong) UIColor *bkgColor;
+@property (nonatomic, strong) UIColor *bkgColor;
 
 /**
  * The textColor of message label. Default is white color.
  */
-@property (strong) UIColor *labelColor;
+@property (nonatomic, strong) UIColor *labelColor;
 
 /**
  * The font of message label. Default is system font with 15 font size.
  */
-@property (strong) UIFont *labelFont;
+@property (nonatomic, strong) UIFont *labelFont;
 
 /**
  * The image on the toast when the style is 'ZHToastStyleImage', must be set an image before you show toast. Default is nil.
  */
-@property (strong) UIImage *image;
+@property (nonatomic, strong) UIImage *image;
 
 /**
  * The corner radius of the toast layer. Default is 6.0f.
  */
-@property (assign) float toastRadius;
+@property (nonatomic, assign) float toastRadius;
 
 /**
  * The opacity of the toast, will be used in drawing the background. Default is 0.7f.
  */
-@property (assign) float opacity;
+@property (nonatomic, assign) float opacity;
 
 /**
  * The offset in y axis, change this value to make toast show in different postion vertically. Default is 0;
  */
-@property (assign) CGFloat offsetY;
+@property (nonatomic, assign) CGFloat offsetY;
 
 /**
  * The displayed duration of toast. Default is 2 seconds.
  */
-@property (assign) NSTimeInterval duration;
+@property (nonatomic, assign) NSTimeInterval duration;
 
 /**
  * The text of message label. Default is nil. 
  *
  * @note Only when the toast style is 'ZHToastStyleHUD' you can let the labelText be nil, or you must set a string for it.
  */
-@property (copy) NSString *labelText;
+@property (nonatomic, copy) NSString *labelText;
 
 /**
  * whether the corner radius of toast is round (if YES, the corner radius equals half height of the toast). Default is NO.
  */
-@property (assign) BOOL isRoundedCorner;
+@property (nonatomic, assign) BOOL isRoundedCorner;
 
 /**
  * whether the toast automatically hide after showing for a few seconds. Default is NO.
  */
-@property (assign) BOOL automaticallyHide;
+@property (nonatomic, assign) BOOL automaticallyHide;
 
 /**
  * Show toast with style 'ZHToastStyleHint'.
