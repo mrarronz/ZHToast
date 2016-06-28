@@ -28,6 +28,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "UIView+Frame.h"
 
 typedef NS_ENUM(NSInteger, ZHToastAnimation) {
     /** No animation. */

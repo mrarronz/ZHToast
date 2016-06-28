@@ -5,7 +5,6 @@
 //
 
 #import "ZHToastView.h"
-#import "UIView+Frame.h"
 
 /// Default padding of label and toast.
 static const CGFloat kPadding = 10;
